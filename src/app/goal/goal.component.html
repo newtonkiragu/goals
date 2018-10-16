@@ -2,7 +2,7 @@
 <ol>
   <div *ngFor='let goal of goals; let i = index'>
   <li>{{ goal.name }}</li>
-  <button (click)='toggleDetails(i)'>Toggle details</button>
+  <button (click)='toggleDetails(i)' class="btn btn-default">Toggle details</button>
   <app-goal-details *ngIf='goal.showGoalDescription' [goal]='goal'></app-goal-details>
 </div>
 </ol>
