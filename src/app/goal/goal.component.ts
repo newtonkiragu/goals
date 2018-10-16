@@ -15,6 +15,9 @@ export class GoalComponent implements OnInit {
     new Goal(5, 'read thirteen minutes', 'this goal might never be attained'),
     new Goal(6, 'read fourteen minutes', 'this sounds like a grammatical error')
   ]
+  toggleDetails(index){
+    this.goals[index].showGoalDescription = !this.goals[index].showGoalDescription;
+  }
   constructor() { }
 
   ngOnInit() {

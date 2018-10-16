@@ -1,6 +1,9 @@
 <h2>these are my other goals:</h2>
-<ol  *ngFor='let goal of goals'>
+<ol>
+  <div *ngFor='let goal of goals; let i = index'>
   <li>{{ goal.name }}</li>
-  <app-goal-details [goal]='goal'></app-goal-details>
+  <button (click)='toggleDetails(i)'>Toggle details</button>
+  <app-goal-details *ngIf='goal.showGoalDescription' [goal]='goal'></app-goal-details>
+</div>
 </ol>
 <p *ngIf='goals.length > 5'>You have too many goals, chances are, you wont be able to complete working on all of them</p>
