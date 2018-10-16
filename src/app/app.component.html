@@ -6,8 +6,4 @@
 </div>
 <h1>My Goals</h1>
 <h2>my goal for today is:</h2> <p> {{ goal }}</p>
-<h2>these are my other goals:</h2>
-<ol>
-  <li *ngFor='let goal of goals'>{{ goal.name }}</li>
-</ol>
-<p *ngIf='goals.length > 5'>You have too many goals, chances are, you wont be able to complete working on all of them</p>
+<app-goal></app-goal>
