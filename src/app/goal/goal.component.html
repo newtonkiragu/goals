@@ -1,7 +1,7 @@
 <h2>these are my other goals:</h2>
 <ol>
   <div *ngFor='let goal of goals; let i = index'>
-  <li>{{ goal.name }}</li>
+  <li id="{{i}}" appStrikethrough>{{ goal.name }}</li>
   <button (click)='toggleDetails(i)' class="btn btn-default">Toggle details</button>
   <app-goal-details *ngIf='goal.showGoalDescription' [goal]='goal' (isComplete)='completeGoal($event,i)'></app-goal-details>
 </div>
