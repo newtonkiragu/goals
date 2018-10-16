@@ -1,5 +1,6 @@
 <h2>these are my other goals:</h2>
-<ol>
-  <li *ngFor='let goal of goals'>{{ goal.name }}</li>
+<ol  *ngFor='let goal of goals'>
+  <li>{{ goal.name }}</li>
+  <app-goal-details [goal]='goal'></app-goal-details>
 </ol>
 <p *ngIf='goals.length > 5'>You have too many goals, chances are, you wont be able to complete working on all of them</p>
