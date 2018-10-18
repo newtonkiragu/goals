@@ -3,7 +3,7 @@
   <div *ngFor='let goal of goals; let i = index'>
   <li id="{{i}}" appStrikethrough>{{ goal.name }} due on {{ goal.completeDate|date|uppercase }}</li>
   <button (click)='toggleDetails(i)' class="btn btn-default">Toggle details</button>
-  <app-goal-details *ngIf='goal.showGoalDescription' [goal]='goal' (isComplete)='completeGoal($event,i)'></app-goal-details>
+  <app-goal-details *ngIf='goal.showGoalDescription' [goal]='goal' (isComplete)='deleteGoal($event,i)'></app-goal-details>
 </div>
 </ol>
 <p *ngIf='goals.length > 5'>You have too many goals, chances are, you wont be able to complete working on all of them</p>
